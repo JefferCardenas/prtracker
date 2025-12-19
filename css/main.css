@@ -1,0 +1,30 @@
+body{
+    background: #020024;
+    background: repeating-linear-gradient(rgba(2, 0, 36, 1) 0%, rgba(6, 6, 69, 1));
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.containerSeleccion{
+    border-color: aliceblue;
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+}
+
+.containerlicor{
+    display: none;
+}
+
+.containerlicor.show{
+    display: block;
+}
+
+.containerbotonAgregar{
+    display: none;
+}
+
+.containerbotonAgregar.show{
+    display: block;
+}
