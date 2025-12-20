@@ -1,11 +1,24 @@
+
+let checkboxtamano = document.querySelectorAll('[name="rdoz"]');
+let checkboxLicor = document.querySelectorAll('[name="rdlicor"]');
+let containerRadiosLicor = document.getElementById('containerlicor');
+let containerBotonAgregar = document.getElementById('containerBotonAgregar');
+let btnAgregarModal = document.getElementById('btnAgregarModal');
+
+function cleanChecks(){
+
+    containerRadiosLicor.classList.remove('show');
+    containerBotonAgregar.classList.remove('show');
+    checkboxtamano.forEach((checkbox) => {
+        checkbox.checked = false;
+    });
+    checkboxLicor.forEach((checkbox) => {
+        checkbox.checked = false;
+    });
+}
+
 function setup(){
 
-
-    let checkboxtamano = document.querySelectorAll('[name="rdoz"]');
-    let checkboxLicor = document.querySelectorAll('[name="rdlicor"]');
-    let containerRadiosLicor = document.getElementById('containerlicor');
-    let containerBotonAgregar = document.getElementById('containerBotonAgregar');
-    let btnAgregarModal = document.getElementById('btnAgregarModal');
 
     var storage = window.localStorage;
 
@@ -24,9 +37,9 @@ function setup(){
 
     btnAgregarModal.addEventListener('click', function() {
         
-        alert('¡Elemento agregado!');
+        console.log('Producto agregado al carrito');
 
-
+        cleanChecks();
         // Cerrar el modal después de agregar
         let modal = bootstrap.Modal.getInstance(document.getElementById('modalConfirmacion'));
         modal.hide();

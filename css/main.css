@@ -5,6 +5,50 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
+    font-family: 'bbh-bogle-regular', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navBar{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.navList{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#iconTrash{
+    width: 40px;
+    height: 40px;
+}
+
+.btnPR{
+    background-image: linear-gradient(to right, #02a4fc, #fc00f4);
+    background-color: #eb94d0;
+    border-radius: 25px;
+    color: #fafafa;
+    font-family: 'bbh-bogle-regular', sans-serif;
+    font-size: 17px;
+    padding: 19px;
+    text-decoration: none;
+}
+
+.headerTitle{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #02a4fc, #fc00f4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .containerSeleccion{
@@ -13,12 +57,48 @@ body{
     border-bottom-style: dashed;
 }
 
+.boxCheck {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: 1px solid aliceblue;
+    border-radius: 20%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.boxCheck:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+input[type="radio"]:checked + .boxCheck {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.containerChecks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 24px;
+
+}
+
+.containertamano{
+    margin-bottom: 30px;
+}
+
 .containerlicor{
     display: none;
 }
 
 .containerlicor.show{
     display: block;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .containerbotonAgregar{
@@ -27,4 +107,9 @@ body{
 
 .containerbotonAgregar.show{
     display: block;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
+
