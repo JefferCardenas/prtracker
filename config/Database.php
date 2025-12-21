@@ -6,7 +6,7 @@ class Database extends PDO{
     private $HOST = "aws-0-us-west-2.pooler.supabase.com";
     private $DBNAME = "postgres";
     private $USER = "postgres.cgtimiilqvvwqmgyzbvz";
-    private $PASSWORD = "PR27032002@";
+    private $PASSWORD = "";
     private $DBPORT = "5432";
     private $pool_mode = "session";
 
