@@ -17,7 +17,7 @@
     <title>PR TRACKER</title>
 </head>
 
-<body onload="setup()">
+<body>
 
 <?php require_once './header.php'; ?>
     <nav>
