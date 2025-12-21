@@ -1,3 +1,21 @@
+<?php
+require_once __DIR__ . "/../config/Database.php";
+$con = Database::singleton();
+$result = new stdClass();
+
+$query = "select * from productos;";
+
+try {
+
+    $retorno = $con->prepare($query);
+    $retorno->execute();
+
+    $result = $retorno->fetchAll();
+} catch (PDOException $ex) {
+    echo $ex->getMessage();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +37,7 @@
 
 <body>
 
-<?php require_once './header.php'; ?>
+    <?php require_once './header.php'; ?>
     <nav>
         <ul class="navBar">
             <lo>
@@ -30,7 +48,11 @@
     <section class="containerResumen" id="containerResumen">
         <h6 style="text-align: center;">Pedidos hoy</h6>
         <div id="resumenPedido">
-            <!-- Resumen del pedido se mostrará aquí -->
+            <p>ID -> <?php echo $result[0]["id_producto"] ?></p>
+            <p>NOMBRE -> <?php echo $result[0]["nombre"] ?></p>
+            <p>PRECIO -> <?php echo $result[0]["precio"] ?></p>
+            <p>STOCK ACTUAL -> <?php echo $result[0]["stock_actual"] ?></p>
+            <p>STOCK MINIMO -> <?php echo $result[0]["stock_minimo"] ?></p>
         </div>
 
     </section>

@@ -16,14 +16,13 @@ class Database extends PDO{
             parent::__construct("pgsql:host=$this->HOST;port=$this->DBPORT;dbname=$this->DBNAME;sslmode=require", $this->USER, $this->PASSWORD);
             $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-            echo "CONEXION EXITOSA!";
         }catch (Exception $ex){
             echo $ex->getMessage();
         }
 
     }
 
-    public static function Singleton(){
+    public static function singleton(){
         if(!isset(self::$instance)){
             $miClase = __CLASS__;
             self::$instance = new $miClase;
