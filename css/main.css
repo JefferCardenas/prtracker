@@ -51,11 +51,6 @@ body{
   -webkit-text-fill-color: transparent;
 }
 
-.containerSeleccion{
-    border-color: aliceblue;
-    border-bottom-width: 1px;
-    border-bottom-style: dashed;
-}
 
 .boxCheck {
     display: inline-flex;
@@ -87,6 +82,7 @@ input[type="radio"]:checked + .boxCheck {
 
 }
 
+
 .containertamano{
     margin-bottom: 30px;
 }
@@ -100,6 +96,45 @@ input[type="radio"]:checked + .boxCheck {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+
+.containerCantidad{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#txtCantidad::-webkit-inner-spin-button,
+#txtCantidad::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#txtCantidad{
+    background-color: transparent;
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    border: none;
+    width: 5rem;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.btnCantidad{
+    width: 70px;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.containerBtnCantidad{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
 
 .containerbotonAgregar{
     display: none;

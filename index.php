@@ -3,15 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">   
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Bogle&display=swap" rel="stylesheet">
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -70,6 +71,16 @@
                 </div>
             </div>
 
+            <!-- CONTENEDOR CANTIDAD -->
+            <div class="containerCantidad">
+                <h4 for="cantidad">Cantidad: </h4>
+                <div class="containerBtnCantidad">
+                    <button type="button" id="btnMenos" class="btnPR btnCantidad">-</button>
+                    <input type="number" name="cantidad" id="txtCantidad" value="1" min="1" readonly> 
+                    <button type="button" id="btnMas" class="btnPR btnCantidad">+</button>
+                </div>
+            </div>
+
             <div class="containerbotonAgregar" id="containerBotonAgregar">
                 <button type="button" class="btnPR"
                     data-bs-toggle="modal"
@@ -107,8 +118,9 @@
         </div>
     </div>
 
-    <link rel="stylesheet" href="css/main.css">
+    
     <script src="js/main.js"></script>
+    <script src="js/gestionVenta.js"></script>
 </body>
 
 </html>

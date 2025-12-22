@@ -3,8 +3,11 @@ let checkboxtamano = document.querySelectorAll('[name="rdoz"]');
 let checkboxLicor = document.querySelectorAll('[name="rdlicor"]');
 let containerRadiosLicor = document.getElementById('containerlicor');
 let containerBotonAgregar = document.getElementById('containerBotonAgregar');
-let btnAgregarModal = document.getElementById('btnAgregarModal');
+let btnMenos = document.getElementById("btnMenos");
+let btnMas = document.getElementById("btnMas");
+let txtCantidad = document.getElementById("txtCantidad");
 
+//funcion para reinicar los checks
 function cleanChecks(){
 
     containerRadiosLicor.classList.remove('show');
@@ -15,12 +18,27 @@ function cleanChecks(){
     checkboxLicor.forEach((checkbox) => {
         checkbox.checked = false;
     });
+
+    txtCantidad.value = 1;
+}
+
+function gestionCantidad(){
+
+    btnMenos.addEventListener("click", ()=>{
+        if(parseInt(txtCantidad.value) > 1){
+            txtCantidad.value = parseInt(txtCantidad.value) - 1;
+        }
+    });
+
+    btnMas.addEventListener("click", ()=>{
+        txtCantidad.value = parseInt(txtCantidad.value) + 1;
+    });
+
 }
 
 function setup(){
 
-
-    var storage = window.localStorage;
+    gestionCantidad();
 
     checkboxtamano.forEach((checkbox) => {
         checkbox.addEventListener('change', function() {
@@ -33,16 +51,6 @@ function setup(){
         checkbox.addEventListener('change', function() {
             containerBotonAgregar.classList.add('show');
         });
-    });
-
-    btnAgregarModal.addEventListener('click', function() {
-        
-        console.log('Producto agregado al carrito');
-
-        cleanChecks();
-        // Cerrar el modal después de agregar
-        let modal = bootstrap.Modal.getInstance(document.getElementById('modalConfirmacion'));
-        modal.hide();
     });
 
 
