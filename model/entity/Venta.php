@@ -1,41 +1,46 @@
 <?php
-class Venta{
+class Venta
+{
     private $idVenta;
     private $fecha;
     private $total;
 
-    public function __construct(int $idVenta, string $fecha, float $total) {
+    public function __construct($idVenta = null, string $fecha, float $total)
+    {
         $this->idVenta = $idVenta;
         $this->fecha = $fecha;
         $this->total = $total;
     }
 
     // --- GETTERS ---
-    public function getIdVenta(): int {
+    public function getIdVenta(): int
+    {
         return $this->idVenta;
     }
 
-    public function getFecha(): string {
+    public function getFecha(): string
+    {
         return $this->fecha;
     }
 
-    public function getTotal(): float {
+    public function getTotal(): float
+    {
         return $this->total;
     }
 
     // --- SETTERS ---
-    public function setIdVenta(int $idVenta): void {
+    public function setIdVenta(int $idVenta): void
+    {
         $this->idVenta = $idVenta;
     }
 
-    public function setFecha(string $fecha): void {
+    public function setFecha(string $fecha): void
+    {
         $this->fecha = $fecha;
     }
 
-    public function setTotal(float $total): void {
+    public function setTotal(float $total): void
+    {
         $this->total = $total;
     }
-
 }
-
-?>
